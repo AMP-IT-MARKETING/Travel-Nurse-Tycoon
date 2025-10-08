@@ -20,6 +20,20 @@ The development server runs at [http://localhost:3000](http://localhost:3000). T
 - `npm run format` – check formatting with Prettier
 - `npm run format:write` – apply Prettier formatting
 
+## Container Deployment
+
+The project ships with a multi-stage Dockerfile that builds the Next.js app and
+starts it with `next start` on port 8080—Cloud Run's expected default. To build
+and run the container locally:
+
+```bash
+docker build -t travel-nurse-tycoon .
+docker run -p 8080:8080 travel-nurse-tycoon
+```
+
+Cloud Run will automatically inject the `PORT` environment variable, so no
+additional configuration is required for deployment.
+
 ## Content
 
 Seed data lives in [`docs/product_spec_gdd.md`](docs/product_spec_gdd.md) and the in-app mock data inside [`data`](data).
