@@ -15,11 +15,11 @@ export function EnergyBar({ energy, trend }: EnergyBarProps) {
 
   return (
     <div className="w-full">
-      <div className="mb-1 flex items-center justify-between text-xs font-semibold text-slate-500">
+      <div className="mb-1 flex items-center justify-between text-xs font-semibold text-brand-ocean/70">
         <span>Energy</span>
         <span>{energy}%</span>
       </div>
-      <div className="h-2 rounded-full bg-slate-200">
+      <div className="h-2 rounded-full bg-brand-ocean/10">
         <div
           className={clsx(
             "h-2 rounded-full transition-all duration-500 ease-out",
@@ -28,7 +28,7 @@ export function EnergyBar({ energy, trend }: EnergyBarProps) {
           style={{ width: `${Math.min(100, Math.max(0, energy))}%` }}
         />
       </div>
-      <p className="mt-2 text-xs text-slate-500">
+      <p className="mt-2 text-xs text-brand-ocean/70">
         {trend === "low" &&
           "Low energy can reduce offer acceptance. Schedule recovery time."}
         {trend === "stable" &&

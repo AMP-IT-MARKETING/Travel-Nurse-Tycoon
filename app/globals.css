@@ -4,13 +4,46 @@
 
 :root {
   color-scheme: light;
+  --amp-teal: #00aaa1;
+  --amp-ocean: #3e4e56;
+  --amp-darkteal: #137d79;
+  --amp-yellow: #ffc700;
+  --ui-bg: #f7fafc;
+  --ui-card: #ffffff;
+  --ui-border: #e5e7eb;
 }
 
 body {
   min-height: 100vh;
-  background-color: theme("colors.surface.50");
+  background-color: var(--ui-bg);
+  color: var(--amp-ocean);
 }
 
 main {
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans), "Source Sans Pro", system-ui;
+  color: var(--amp-ocean);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgba(0, 170, 161, 0.4);
+  outline-offset: 2px;
+}
+
+button {
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+button:active {
+  transform: scale(0.98);
 }

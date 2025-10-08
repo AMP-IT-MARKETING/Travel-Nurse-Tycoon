@@ -17,8 +17,8 @@ export function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky bottom-0 mt-auto border-t border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <ul className="mx-auto flex max-w-screen-sm items-center justify-around gap-1 px-2 py-3 text-xs font-medium text-slate-500">
+    <nav className="sticky bottom-0 mt-auto border-t border-border-subtle/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+      <ul className="mx-auto flex max-w-screen-sm items-center justify-around gap-1 px-2 py-3 text-xs font-semibold text-brand-ocean/70">
         {NAV_ITEMS.map((item) => {
           const isActive =
             item.href === "/"
@@ -31,8 +31,8 @@ export function BottomNav() {
                 className={clsx(
                   "flex flex-col items-center gap-1 rounded-xl px-3 py-2 transition",
                   isActive
-                    ? "bg-surface-100 text-brand-primary"
-                    : "hover:bg-surface-100",
+                    ? "bg-brand-primary/10 text-brand-primary shadow-soft-xl"
+                    : "hover:bg-brand-primary/5",
                 )}
                 aria-current={isActive ? "page" : undefined}
               >

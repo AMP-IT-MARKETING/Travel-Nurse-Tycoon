@@ -3,15 +3,16 @@
 import { SectionCard } from "@/components/SectionCard";
 import { ProgressRing } from "@/components/ProgressRing";
 import { PayBreakdown } from "@/components/PayBreakdown";
+import { TaxSettingsPanel } from "@/components/TaxSettingsPanel";
 import { useNurseStore } from "@/lib/store";
 
 export default function FinancesPage() {
-  const { ledger, goals } = useNurseStore();
+  const { ledger, goals, taxSettings } = useNurseStore();
 
   return (
     <main className="space-y-6 pb-8">
       <SectionCard title="Weekly payday" icon={<span aria-hidden>💵</span>}>
-        <PayBreakdown ledger={ledger} />
+        <PayBreakdown ledger={ledger} taxSettings={taxSettings} />
       </SectionCard>
       <SectionCard title="Goals" icon={<span aria-hidden>🎯</span>} subtle>
         <div className="flex flex-wrap gap-6">
@@ -24,6 +25,13 @@ export default function FinancesPage() {
             />
           ))}
         </div>
+      </SectionCard>
+      <SectionCard
+        title="Tax preview"
+        icon={<span aria-hidden>🧮</span>}
+        subtle
+      >
+        <TaxSettingsPanel />
       </SectionCard>
     </main>
   );
