@@ -52,6 +52,7 @@ export type LedgerEntry = {
   type: "pay" | "expense" | "bonus";
   label: string;
   amount: number;
+  taxable?: boolean;
 };
 
 export type Message = {
@@ -75,6 +76,13 @@ export type Certification = {
   etaDays?: number;
 };
 
+export type AvatarConfig = {
+  scrubsColor: string;
+  skinTone: string;
+  hairColor: string;
+  accessory?: "stethoscope" | "badge" | null;
+};
+
 export type PlayerState = {
   name: string;
   specialty: string;
@@ -83,4 +91,45 @@ export type PlayerState = {
   energy: number;
   morale: number;
   savings: number;
+  avatar: AvatarConfig;
+};
+
+export type Quest = {
+  id: string;
+  name: string;
+  description?: string;
+  type: "daily" | "weekly";
+  progress: number;
+  target: number;
+  xpReward: number;
+  completed: boolean;
+};
+
+export type ReputationTrack = {
+  id: string;
+  name: string;
+  score: number;
+  trend: "up" | "steady" | "down";
+};
+
+export type ReputationState = {
+  agencies: ReputationTrack[];
+  facilities: ReputationTrack[];
+};
+
+export type TaxSettings = {
+  federalRate: number;
+  stateRate: number;
+  includeFica: boolean;
+  selfEmployed: boolean;
+};
+
+export type LevelState = {
+  level: number;
+  title: string;
+  unlock: string;
+  xpIntoLevel: number;
+  xpToNext: number | null;
+  nextLevel?: number;
+  nextUnlock?: string;
 };

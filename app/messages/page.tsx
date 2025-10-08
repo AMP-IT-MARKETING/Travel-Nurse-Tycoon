@@ -13,9 +13,8 @@ export default function MessagesPage() {
         <MessageList messages={messages} />
       </SectionCard>
       <SectionCard title="Tone" icon={<span aria-hidden>✨</span>} subtle>
-        <p className="text-sm text-slate-600">
-          Messages are written with friendly agency partners in mind. Expect
-          gentle reminders and quick recoveries—never punitive notes.
+        <p className="text-sm text-brand-ocean/80">
+          Messages are written with friendly agency partners in mind. Expect gentle reminders and quick recoveries—never punitive notes.
         </p>
       </SectionCard>
     </main>

@@ -18,18 +18,20 @@ export function SectionCard({
   return (
     <section
       className={clsx(
-        "rounded-3xl border p-5 shadow-soft-xl",
-        subtle ? "border-surface-100 bg-white/40" : "border-white bg-white",
+        "rounded-4xl border p-5 shadow-soft-xl",
+        subtle
+          ? "border-brand-ocean/5 bg-white/70"
+          : "border-brand-ocean/10 bg-white",
       )}
     >
       <header className="mb-4 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2 text-base font-semibold">
+        <div className="flex items-center gap-2 text-base font-semibold text-brand-ocean">
           {icon}
           <span>{title}</span>
         </div>
         {action}
       </header>
-      <div className="space-y-3 text-sm text-slate-600">{children}</div>
+      <div className="space-y-3 text-sm text-brand-ocean/80">{children}</div>
     </section>
   );
 }

@@ -17,7 +17,7 @@ export const offers: Offer[] = [
     agencies: [
       {
         id: "amp",
-        name: "Advantage Medical Professionals",
+        name: "AMP • Advantage Medical Professionals",
         reputation: 92,
         featured: true,
       },
@@ -43,7 +43,7 @@ export const offers: Offer[] = [
     agencies: [
       {
         id: "amp",
-        name: "Advantage Medical Professionals",
+        name: "AMP • Advantage Medical Professionals",
         reputation: 92,
         featured: true,
       },
@@ -68,7 +68,7 @@ export const offers: Offer[] = [
     agencies: [
       {
         id: "amp",
-        name: "Advantage Medical Professionals",
+        name: "AMP • Advantage Medical Professionals",
         reputation: 92,
         featured: true,
       },

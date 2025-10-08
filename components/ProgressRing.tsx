@@ -34,7 +34,7 @@ export function ProgressRing({
         aria-label={label}
       >
         <circle
-          className="stroke-slate-200"
+          className="stroke-brand-ocean/15"
           strokeWidth={strokeWidth}
           fill="transparent"
           r={radius}
@@ -53,10 +53,10 @@ export function ProgressRing({
           strokeDashoffset={offset}
         />
       </svg>
-      <span className="text-xs font-medium uppercase tracking-wide text-slate-500">
+      <span className="text-xs font-medium uppercase tracking-wide text-brand-ocean/60">
         {label}
       </span>
-      <span className="text-sm font-semibold text-slate-900">
+      <span className="text-sm font-semibold text-brand-ocean">
         {Math.round(progress * 100)}%
       </span>
     </div>
