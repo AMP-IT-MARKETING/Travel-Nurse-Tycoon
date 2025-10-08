@@ -260,7 +260,7 @@ export const useNurseStore = create<NurseStore>((set, get) => ({
     set((state) => {
       let gainedXp = 0;
       let questIncrement: string | null = null;
-      const tasks = state.tasks.map((task) => {
+      const tasks = state.tasks.map((task): CredentialTask => {
         if (task.id !== taskId) return task;
         if (task.status === "to-collect") {
           return {
